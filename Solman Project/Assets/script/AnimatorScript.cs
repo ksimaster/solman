@@ -4,57 +4,70 @@ using UnityEngine;
 
 
 
-public class SimplePlayer : MonoBehaviour
+public class AnimatorScript : MonoBehaviour
 {
 
     Animator animator;
-    bool otgim = false;
+    int changeAnim = 0;
 
     
     void Start()
     {
         animator = GetComponent<Animator>();
+        ResetAnim();
     }
 
     // Update is called once per frame
     void Update()
     {
-       
+        ChangeAnimation();
+        ResetAnim();
+        
        // bool fire = Input.GetButtonDown("Fire1");
-
         
       //  animator.SetBool("Fire", fire);
     }
 
-    void Otgimanie_Bttn()
+    void ChangeAnimation()
     {
-        otgim = true;
-        animator.SetBool("otgim", otgim);
+        animator.SetInteger("ChangeAnim", changeAnim);
     }
 
-    void Otgim_Prigok_Bttn()
+    void ResetAnim()
     {
-
+        if (changeAnim != 0) changeAnim = 0;
+         
+        
     }
 
-    void Planka_Bttn()
+   public void Otgimanie_Bttn()
     {
-
+        changeAnim = 1;
     }
 
-    void Prigok_Bttn()
+   public void Otgim_Prigok_Bttn()
     {
-
+        changeAnim = 2;
     }
 
-    void Velosiped_Bttn()
+   public void Planka_Bttn()
     {
-
+        changeAnim = 3;
     }
 
-    void Voen_prigok_Bttn()
+   public void Prigok_Bttn()
     {
+        changeAnim = 4;
+    }
 
+   public void Velosiped_Bttn()
+    {
+        changeAnim = 5;
+    }
+
+   public void Voen_prigok_Bttn()
+    {
+        changeAnim = 6;
     }
 
 
