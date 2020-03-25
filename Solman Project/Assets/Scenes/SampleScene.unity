@@ -12055,7 +12055,18 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 403372268}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 411905379}
+        m_MethodName: Prigok_Bttn
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &403372268
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -15270,7 +15281,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "\u041F\u0440\u0438\u0441\u0435\u0434\u0430\u043D\u0438\u044F"
+  m_Text: "\u041E\u0442\u0436\u0438\u043C\u0430\u043D\u0438\u0435 \u0441 \u043F\u0440\u044B\u0436\u043A\u043E\u043C"
 --- !u!222 &760548914
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -15518,7 +15529,7 @@ GameObject:
   - component: {fileID: 851374568}
   - component: {fileID: 851374567}
   m_Layer: 5
-  m_Name: Anim_Prised
+  m_Name: Anim_Ogim_Prigok
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -15586,7 +15597,18 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 851374568}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 411905379}
+        m_MethodName: Otgim_Prigok_Bttn
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &851374568
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -26937,7 +26959,18 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1707206947}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 411905379}
+        m_MethodName: Otgimanie_Bttn
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1707206947
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -27997,7 +28030,18 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1923137241}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 411905379}
+        m_MethodName: Velosiped_Bttn
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1923137241
 MonoBehaviour:
   m_ObjectHideFlags: 0

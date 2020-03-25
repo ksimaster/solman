@@ -36,8 +36,6 @@ public class AnimatorScript : MonoBehaviour
     void ResetAnim()
     {
         if (changeAnim != 0) changeAnim = 0;
-         
-        
     }
 
    public void Otgimanie_Bttn()
