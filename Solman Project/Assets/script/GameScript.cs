@@ -32,6 +32,8 @@ public class GameScript : MonoBehaviour {
 	public GameObject Anim_Otgimaniya;
 	public GameObject Anim_velosiped;
 	public GameObject Anim_prigok;
+	public GameObject Skaf;
+	public GameObject BackMainScene;
 	
 	
     public GameObject HeadAllPanel;
@@ -150,7 +152,30 @@ public class GameScript : MonoBehaviour {
 
 
     }
-
+    public void ButtonSkafShow()
+	{
+	    Anim_Planka.SetActive(false);
+        Anim_Prised.SetActive(false);
+		Anim_Otgimaniya.SetActive(false);
+		Anim_velosiped.SetActive(false);
+		Anim_prigok.SetActive(false);
+        Open_Panel.SetActive(false);
+        Close_Panel.SetActive(false);
+		BackMainScene.SetActive(true);
+		Skaf.SetActive(false);
+	}
+	    public void ButtoexitskaffShow()
+	{
+	    Anim_Planka.SetActive(false);
+        Anim_Prised.SetActive(false);
+		Anim_Otgimaniya.SetActive(false);
+		Anim_velosiped.SetActive(false);
+		Anim_prigok.SetActive(false);
+        Open_Panel.SetActive(true);
+        Close_Panel.SetActive(false);
+		BackMainScene.SetActive(false);
+		Skaf.SetActive(true);
+	}
 	public void ShowPanelBttn_1()
     {
 
