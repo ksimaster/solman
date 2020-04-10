@@ -34,7 +34,9 @@ public class GameScript : MonoBehaviour {
 	public GameObject Anim_prigok;
 	public GameObject Skaf;
 	public GameObject BackMainScene;
-	
+	public GameObject Ustav;
+	public GameObject UstavClose;
+	public GameObject Book;
 	
     public GameObject HeadAllPanel;
     public GameObject exitPanel;
@@ -152,7 +154,54 @@ public class GameScript : MonoBehaviour {
 
 
     }
-    public void ButtonSkafShow()
+
+	
+	
+	
+	
+	
+	
+
+	
+	 public void ButtonUstavOpen()
+	{
+	    Anim_Planka.SetActive(false);
+        Anim_Prised.SetActive(false);
+		Anim_Otgimaniya.SetActive(false);
+		Anim_velosiped.SetActive(false);
+		Anim_prigok.SetActive(false);
+        Open_Panel.SetActive(false);
+        Close_Panel.SetActive(false);
+		BackMainScene.SetActive(false);
+		Skaf.SetActive(false);
+		Book.SetActive(true);
+		Ustav.SetActive(false);
+		UstavClose.SetActive(true);
+	}
+	
+		 public void ButtonUstavClose()
+	{
+	    Anim_Planka.SetActive(false);
+        Anim_Prised.SetActive(false);
+		Anim_Otgimaniya.SetActive(false);
+		Anim_velosiped.SetActive(false);
+		Anim_prigok.SetActive(false);
+        Open_Panel.SetActive(true);
+        Close_Panel.SetActive(false);
+		BackMainScene.SetActive(false);
+		Skaf.SetActive(true);
+		Book.SetActive(false);
+		Ustav.SetActive(true);
+		UstavClose.SetActive(false);
+		
+		
+		
+		
+		
+	}
+	
+	
+	    public void ButtonSkafShow()
 	{
 	    Anim_Planka.SetActive(false);
         Anim_Prised.SetActive(false);
@@ -162,8 +211,13 @@ public class GameScript : MonoBehaviour {
         Open_Panel.SetActive(false);
         Close_Panel.SetActive(false);
 		BackMainScene.SetActive(true);
-		Skaf.SetActive(false);
+		Book.SetActive(false);
+		Ustav.SetActive(false);
+		UstavClose.SetActive(false);
+		
 	}
+	
+	
 	    public void ButtoexitskaffShow()
 	{
 	    Anim_Planka.SetActive(false);
@@ -175,6 +229,9 @@ public class GameScript : MonoBehaviour {
         Close_Panel.SetActive(false);
 		BackMainScene.SetActive(false);
 		Skaf.SetActive(true);
+		Book.SetActive(false);
+		Ustav.SetActive(true);
+		UstavClose.SetActive(true);
 	}
 	public void ShowPanelBttn_1()
     {
