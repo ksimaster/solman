@@ -37,6 +37,20 @@ public class GameScript : MonoBehaviour {
 	public GameObject Ustav;
 	public GameObject UstavClose;
 	public GameObject Book;
+	public GameObject ButtonExit;
+	public GameObject ButtonVolume;
+	public GameObject ResumeButton;
+	public GameObject ButtonExitYes;
+	public GameObject ButtonExitNo;
+	public GameObject VolumeGameOn;
+	public GameObject VolumeGameOff;
+	public GameObject VolumePercOn;
+	public GameObject VolumePercOff;
+	public GameObject VolumeBack;
+	public GameObject Golos;
+	public GameObject Zvuk;
+	
+	
 	
     public GameObject HeadAllPanel;
     public GameObject exitPanel;
@@ -156,11 +170,60 @@ public class GameScript : MonoBehaviour {
     }
 
 	
+	public void ButtonExitYesorNoOpen()
+	{
+	    ButtonExitYes.SetActive(true);
+        ButtonExitNo.SetActive(true);
+		ButtonExit.SetActive(false);
+		ButtonVolume.SetActive(false);
+		ResumeButton.SetActive(false);
+		
+		
+	}
 	
+	public void ButtonButtonVolume()
+	{
+	    
+		ButtonExit.SetActive(false);
+		ButtonVolume.SetActive(false);
+		ResumeButton.SetActive(false);
+		VolumeBack.SetActive(true);
+		Zvuk.SetActive(true);
+		Golos.SetActive(true);
+		
+		
+	}
 	
+	public void ButtonButtonVolumeBack()
+	{
+	  
+		ButtonExit.SetActive(true);
+		ButtonVolume.SetActive(true);
+		ResumeButton.SetActive(true);
+		VolumeBack.SetActive(false);
+		Zvuk.SetActive(false);
+		Golos.SetActive(false);
+		
+	}
 	
+	public void ButtonExitNoOpen()
+	{
+	    ButtonExitYes.SetActive(false);
+        ButtonExitNo.SetActive(false);
+		ButtonExit.SetActive(true);
+		ButtonVolume.SetActive(true);
+		ResumeButton.SetActive(true);
+		
+		
+	}
+	public void ButtonExitYesOpen()
 	
-	
+	{
+	 
+
+Application.Quit();	
+		
+	}
 
 	
 	 public void ButtonUstavOpen()
@@ -200,6 +263,34 @@ public class GameScript : MonoBehaviour {
 		
 	}
 	
+	public void ButtonVolumeGameOff()
+	{
+	 VolumeGameOff.SetActive(false);
+	 VolumeGameOn.SetActive(true);
+		
+	}
+	
+	public void ButtonVolumeGameOn()
+	{
+	 VolumeGameOff.SetActive(true);
+	 VolumeGameOn.SetActive(false);
+		
+	}
+	
+	
+	public void ButtonVolumePercOff()
+	{
+	 VolumePercOff.SetActive(false);
+	 VolumePercOn.SetActive(true);
+		
+	}
+	
+	public void ButtonVolumePercOn()
+	{
+	 VolumePercOff.SetActive(true);
+	 VolumePercOn.SetActive(false);
+		
+	}
 	
 	    public void ButtonSkafShow()
 	{

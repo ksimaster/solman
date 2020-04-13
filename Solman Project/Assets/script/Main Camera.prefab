@@ -1,0 +1,193 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &5721012174337048513
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 5721012174337048516}
+  - component: {fileID: 5721012174337048515}
+  - component: {fileID: 5721012174337048514}
+  - component: {fileID: 5721012174337048517}
+  m_Layer: 0
+  m_Name: Main Camera
+  m_TagString: MainCamera
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &5721012174337048516
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5721012174337048513}
+  m_LocalRotation: {x: -0.008282453, y: 0.9812001, z: -0.18790244, w: -0.0432491}
+  m_LocalPosition: {x: 0.07202333, y: 1.72, z: 2.2650275}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 21.682001, y: 185.04799, z: 0}
+--- !u!20 &5721012174337048515
+Camera:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5721012174337048513}
+  m_Enabled: 1
+  serializedVersion: 2
+  m_ClearFlags: 1
+  m_BackGroundColor: {r: 0.19215687, g: 0.3019608, b: 0.4745098, a: 0}
+  m_projectionMatrixMode: 1
+  m_GateFitMode: 2
+  m_FOVAxisMode: 0
+  m_SensorSize: {x: 36, y: 24}
+  m_LensShift: {x: 0, y: 0}
+  m_FocalLength: 50
+  m_NormalizedViewPortRect:
+    serializedVersion: 2
+    x: 0
+    y: 0
+    width: 1
+    height: 1
+  near clip plane: 0.3
+  far clip plane: 1000
+  field of view: 60
+  orthographic: 0
+  orthographic size: 5
+  m_Depth: 1
+  m_CullingMask:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_RenderingPath: -1
+  m_TargetTexture: {fileID: 0}
+  m_TargetDisplay: 0
+  m_TargetEye: 3
+  m_HDR: 1
+  m_AllowMSAA: 1
+  m_AllowDynamicResolution: 0
+  m_ForceIntoRT: 0
+  m_OcclusionCulling: 1
+  m_StereoConvergence: 10
+  m_StereoSeparation: 0.022
+--- !u!81 &5721012174337048514
+AudioListener:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5721012174337048513}
+  m_Enabled: 1
+--- !u!114 &5721012174337048517
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5721012174337048513}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8b0b88071e8173049a7479c90de520e9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Questions: []
+  publicTimeCount: 20
+  trueCC: {r: 0, g: 0, b: 0, a: 0}
+  falseCC: {r: 0, g: 0, b: 0, a: 0}
+  defaultCC: {r: 0, g: 0, b: 0, a: 0}
+  multiplierScore: 100
+  questionText: {fileID: 0}
+  answerBttns:
+  - {fileID: 0}
+  answersText:
+  - {fileID: 0}
+  answersIcons: []
+  randQList: 
+  headPanel: {fileID: 0}
+  Open_Panel: {fileID: 0}
+  Close_Panel: {fileID: 0}
+  Anim_Planka: {fileID: 0}
+  Anim_Prised: {fileID: 0}
+  Anim_Otgimaniya: {fileID: 0}
+  Anim_velosiped: {fileID: 0}
+  Anim_prigok: {fileID: 0}
+  Skaf: {fileID: 0}
+  BackMainScene: {fileID: 0}
+  Ustav: {fileID: 0}
+  UstavClose: {fileID: 0}
+  Book: {fileID: 0}
+  ButtonExit: {fileID: 0}
+  ButtonVolume: {fileID: 0}
+  ResumeButton: {fileID: 0}
+  ButtonExitYes: {fileID: 0}
+  ButtonExitNo: {fileID: 0}
+  VolumeGameOn: {fileID: 0}
+  VolumeGameOff: {fileID: 0}
+  VolumePercOn: {fileID: 0}
+  VolumePercOff: {fileID: 0}
+  VolumeBack: {fileID: 0}
+  HeadAllPanel: {fileID: 0}
+  exitPanel: {fileID: 0}
+  RulsPanel: {fileID: 0}
+  open_audio: {fileID: 0}
+  close_audio: {fileID: 0}
+  Audio_on_off: {fileID: 0}
+  Audio_on_off_1: {fileID: 0}
+  RulsPanel_2: {fileID: 0}
+  PausePanelBattn: {fileID: 0}
+  PausePanel: {fileID: 0}
+  finalText: {fileID: 0}
+  ExitPanelMainMenu: {fileID: 0}
+  ExitPanelExit: {fileID: 0}
+  NumberOfTeam: {fileID: 0}
+  PauseBttn_on: {fileID: 0}
+  NameOfTeam1: {fileID: 0}
+  NameOfTeam2: {fileID: 0}
+  NameOfTeam3: {fileID: 0}
+  BeginTeam: {fileID: 0}
+  PlayBttn: {fileID: 0}
+  RulsBttn: {fileID: 0}
+  ExitBttn: {fileID: 0}
+  PauseOnBttn: {fileID: 0}
+  ComeBackGameBttn: {fileID: 0}
+  AudioMan: {fileID: 0}
+  StatList: {fileID: 0}
+  StatNameOne: {fileID: 0}
+  ScoreTeamOne: {fileID: 0}
+  StatNameTwo: {fileID: 0}
+  ScoreTeamTwo: {fileID: 0}
+  StatNameThree: {fileID: 0}
+  ScoreTeamThree: {fileID: 0}
+  InputNOT1: {fileID: 0}
+  InputNOT2: {fileID: 0}
+  InputNOT3: {fileID: 0}
+  time: {fileID: 0}
+  recordText: {fileID: 0}
+  scoreText: {fileID: 0}
+  BeginTeamText: {fileID: 0}
+  T: 0
+  ij: 0
+  editorImg: {fileID: 0}
+  bg: {fileID: 0}
+  BttnExit: {fileID: 0}
+  numberTeam2: 0
+  numberTeam3: 0
+  teamOneRC: 0
+  teamTwoRC: 0
+  teamThreeRC: 0
+  StatOnOff: 0
+  RulsOnOff: 0
+  NumberOfTeamOnOff: 0
+  NameOfTeam1OnOff: 0
+  NameOfTeam2OnOff: 0
+  NameOfTeam3OnOff: 0
+  BeginTeamOnOff: 0
+  nameT1: 
+  nameT2: 
+  nameT3: 
