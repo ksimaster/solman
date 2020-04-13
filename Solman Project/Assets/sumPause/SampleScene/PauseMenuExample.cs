@@ -4,15 +4,17 @@ using System.Collections;
 public class PauseMenuExample : MonoBehaviour {
 
     GameObject panel;
+    bool openPanel;
 
 	void Awake () {
+
         // Get panel object
         panel = transform.Find("PauseMenuPanel").gameObject;
         if (panel == null) {
             Debug.LogError("PauseMenuPanel object not found.");
             return;
         }
-
+        
         panel.SetActive(false); // Hide menu on start
 	}
 
@@ -20,6 +22,7 @@ public class PauseMenuExample : MonoBehaviour {
     public void ResumeGame () {
         SumPause.Status = false; // Set pause status to false
     }
+
 
     // Add/Remove the event listeners
     void OnEnable() {
