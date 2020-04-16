@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class UstavScript : MonoBehaviour
 {
@@ -8,6 +9,7 @@ public class UstavScript : MonoBehaviour
     int randU;
     string pasteText;
     public string labelUstav;
+    public Text textUstav;
 
     private void Awake()
     {
@@ -107,7 +109,7 @@ public class UstavScript : MonoBehaviour
     public void GetUstavText()
     { 
         randU = Random.Range(0, ustavList.Length);
-        pasteText = ustavList[randU];
+        textUstav.text = ustavList[randU];
 
     }
 

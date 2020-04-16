@@ -49,9 +49,11 @@ public class GameScript : MonoBehaviour {
 	public GameObject VolumeBack;
 	public GameObject Golos;
 	public GameObject Zvuk;
-	
-	
-	
+    //USTAV
+    public GameObject Panel_ustav;
+
+
+
     public GameObject HeadAllPanel;
     public GameObject exitPanel;
     public GameObject RulsPanel;
@@ -237,9 +239,10 @@ Application.Quit();
         Close_Panel.SetActive(false);
 		BackMainScene.SetActive(false);
 		Skaf.SetActive(false);
-		Book.SetActive(true);
-		Ustav.SetActive(false);
-		UstavClose.SetActive(true);
+        //Book.SetActive(true);
+        //Ustav.SetActive(false);
+        //UstavClose.SetActive(true);
+        Panel_ustav.SetActive(true);
 	}
 	
 		 public void ButtonUstavClose()
