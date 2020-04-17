@@ -36,7 +36,10 @@ public class GameScript : MonoBehaviour {
 	public GameObject BackMainScene;
 	public GameObject Ustav;
 	public GameObject UstavClose;
-	public GameObject Book;
+    public GameObject Smile;
+    public GameObject SmileClose;
+
+    public GameObject Book;
 	public GameObject ButtonExit;
 	public GameObject ButtonVolume;
 	public GameObject ResumeButton;
@@ -123,19 +126,22 @@ public class GameScript : MonoBehaviour {
     private List<object> qList;
     private QuestionsList crntQ;
 
+  
+
     private void Start()
     {
-   //     qList = new List<object>(Questions);
- //
-  //      randQList = new int[] { -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1,-1,-1,-1,-1,-1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, - 1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1};
-    //    Debug.Log(randQList.Length);
-      //  StatOnOff = true;
- //       RulsOnOff = true;
- //       NumberOfTeamOnOff = true;
- //       NameOfTeam1OnOff = true;
- //       NameOfTeam2OnOff = true;
- //       NameOfTeam3OnOff = true;
- //       BeginTeamOnOff = true;
+        Panel_ustav.SetActive(false);
+        //     qList = new List<object>(Questions);
+        //
+        //      randQList = new int[] { -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1,-1,-1,-1,-1,-1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, - 1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1};
+        //    Debug.Log(randQList.Length);
+        //  StatOnOff = true;
+        //       RulsOnOff = true;
+        //       NumberOfTeamOnOff = true;
+        //       NameOfTeam1OnOff = true;
+        //       NameOfTeam2OnOff = true;
+        //       NameOfTeam3OnOff = true;
+        //       BeginTeamOnOff = true;
         //HeadAllPanelOnOff = true;
 
     }
@@ -240,12 +246,25 @@ Application.Quit();
 		BackMainScene.SetActive(false);
 		Skaf.SetActive(false);
         //Book.SetActive(true);
-        //Ustav.SetActive(false);
-        //UstavClose.SetActive(true);
+        Ustav.SetActive(false);
+        UstavClose.SetActive(true);
+        Smile.SetActive(false);
+        SmileClose.SetActive(false);
+
         Panel_ustav.SetActive(true);
+
+
 	}
-	
-		 public void ButtonUstavClose()
+
+    
+
+    IEnumerator UstavContinue()
+    {
+        yield return new WaitForSeconds(5);
+
+    }
+
+    public void ButtonUstavClose()
 	{
 	    Anim_Planka.SetActive(false);
         Anim_Prised.SetActive(false);
@@ -256,15 +275,20 @@ Application.Quit();
         Close_Panel.SetActive(false);
 		BackMainScene.SetActive(false);
 		Skaf.SetActive(true);
-		Book.SetActive(false);
-		Ustav.SetActive(true);
-		UstavClose.SetActive(false);
-		
-		
-		
-		
-		
-	}
+        //Book.SetActive(false);
+        Ustav.SetActive(true);
+        UstavClose.SetActive(false);
+        Smile.SetActive(true);
+        SmileClose.SetActive(false);
+        Panel_ustav.SetActive(false);
+
+      
+
+
+
+    }
+
+
 	
 	public void ButtonVolumeGameOff()
 	{
