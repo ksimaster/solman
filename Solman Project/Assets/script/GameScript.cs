@@ -1,4 +1,4 @@
-﻿//Main script for Quiz game by Android | Helper (RU). || Основной скрипт игры викторины от Android | Helper (RU).
+﻿
 using UnityEngine;
 using UnityEngine.UI;
 using System.Collections;
@@ -8,7 +8,7 @@ using System.Collections.Generic;
 
 public class GameScript : MonoBehaviour {
 
-    [HideInInspector]
+   /* [HideInInspector]
     public QuestionsList[] Questions;
     [HideInInspector]
     public int publicTimeCount = 20;
@@ -22,7 +22,7 @@ public class GameScript : MonoBehaviour {
     public Text[] answersText = new Text[1]; // numbers text in the button, тексты для кнопок (равны количеству кнопок)
     public GameObject[] answersIcons; // 0 - trueIcon; 1 - falseIcon;
     public int[] randQList; 
-    public Image headPanel;
+    public Image headPanel; */
 	
 	
 	public GameObject Open_Panel;
@@ -40,6 +40,7 @@ public class GameScript : MonoBehaviour {
     public GameObject SmileClose;
 
     public GameObject Book;
+
 	public GameObject ButtonExit;
 	public GameObject ButtonVolume;
 	public GameObject ResumeButton;
@@ -54,7 +55,11 @@ public class GameScript : MonoBehaviour {
 	public GameObject Zvuk;
     //USTAV
     public GameObject Panel_ustav;
+    //SMILE
     public GameObject Panel_smile;
+
+
+    public GameObject SumPauseBttn;
 
 
 
@@ -84,7 +89,7 @@ public class GameScript : MonoBehaviour {
     public GameObject ComeBackGameBttn;
     public GameObject AudioMan;
     //Объявление листа статистики
-    public GameObject StatList;
+ /*   public GameObject StatList;
     public Text StatNameOne;
     public Text ScoreTeamOne;
     public Text StatNameTwo;
@@ -110,22 +115,22 @@ public class GameScript : MonoBehaviour {
     private bool answerClicked;
     public Texture2D editorImg;
     public Image bg;
-    public GameObject BttnExit;
+    public GameObject BttnExit; */
 
     // Для методов выбора команд и их названий 
     
    // public string nameTeam1, nameTeam2, nameTeam3;
-    public bool numberTeam2, numberTeam3;
-    public bool teamOneRC, teamTwoRC, teamThreeRC;
+   /* public bool numberTeam2, numberTeam3;
+    public bool teamOneRC, teamTwoRC, teamThreeRC; */
     //переменные, определяющие воздействие паузы на соответствующие панели
-    public bool StatOnOff, RulsOnOff, NumberOfTeamOnOff, NameOfTeam1OnOff, NameOfTeam2OnOff, NameOfTeam3OnOff, BeginTeamOnOff;
+  /*  public bool StatOnOff, RulsOnOff, NumberOfTeamOnOff, NameOfTeam1OnOff, NameOfTeam2OnOff, NameOfTeam3OnOff, BeginTeamOnOff; */
   //  public bool HeadAllPanelOnOff;
-    public string nameT1, nameT2, nameT3;
+ /*   public string nameT1, nameT2, nameT3; */
 
-    private bool trueColor, falseColor,defaultColor;
+   /* private bool trueColor, falseColor,defaultColor;
     private int randQ;
     private List<object> qList;
-    private QuestionsList crntQ;
+    private QuestionsList crntQ; */
 
   
 
@@ -254,6 +259,7 @@ public class GameScript : MonoBehaviour {
 
         Panel_ustav.SetActive(true);
 
+        SumPauseBttn.SetActive(false);
 
 	}
 
@@ -283,8 +289,8 @@ public class GameScript : MonoBehaviour {
         SmileClose.SetActive(false);
         Panel_ustav.SetActive(false);
 
-      
 
+        SumPauseBttn.SetActive(true);
 
 
     }
@@ -307,6 +313,8 @@ public class GameScript : MonoBehaviour {
         SmileClose.SetActive(true);
 
         Panel_smile.SetActive(true);
+
+        SumPauseBttn.SetActive(false);
     }
 
     public void ButtonSmileClose()
@@ -326,6 +334,8 @@ public class GameScript : MonoBehaviour {
         Smile.SetActive(true);
         SmileClose.SetActive(false);
         Panel_smile.SetActive(false);
+
+        SumPauseBttn.SetActive(true);
 
     }
 
@@ -411,7 +421,7 @@ public class GameScript : MonoBehaviour {
 
     }
   
-    public void ContBttn()
+ /*   public void ContBttn()
     {
         PausePanel.SetActive(false);
         Time.timeScale = 1;
@@ -467,10 +477,10 @@ public class GameScript : MonoBehaviour {
               HeadAllPanelOnOff = true;
           }
           */
-    }
+    //}
 
 
-    public void BeforeAfterPause()
+   /* public void BeforeAfterPause()
     {
         if (Input.GetKeyDown(KeyCode.Escape) && !PausePanel.activeSelf && !ExitPanelExit.activeSelf && !ExitPanelMainMenu.activeSelf)
         {
@@ -523,7 +533,7 @@ public class GameScript : MonoBehaviour {
             {
                 BeginTeam.SetActive(false);
                 BeginTeamOnOff = false;
-            }
+            } */
             /*
                         //Отключаем панель основной игры (раунда), если она включена
                         if (HeadAllPanel.activeSelf)
@@ -532,9 +542,9 @@ public class GameScript : MonoBehaviour {
                             HeadAllPanelOnOff = false;
                         }
                         */
-        }
+      //  }
         // включение того, что было отключено
-        else if (Input.GetKeyDown(KeyCode.Escape) && PausePanel.activeSelf && !ExitPanelExit.activeSelf && !ExitPanelMainMenu.activeSelf)
+      /*  else if (Input.GetKeyDown(KeyCode.Escape) && PausePanel.activeSelf && !ExitPanelExit.activeSelf && !ExitPanelMainMenu.activeSelf)
         {
             PausePanel.SetActive(false);
             Time.timeScale = 1;
@@ -590,10 +600,10 @@ public class GameScript : MonoBehaviour {
                   HeadAllPanelOnOff = true;
               }
               */
-        }
-    }
+      //  }
+   // }
 
-    public void playBttn()
+   /* public void playBttn()
     {
         T = publicTimeCount;
         StartCoroutine(OneSecond());
@@ -605,84 +615,20 @@ public class GameScript : MonoBehaviour {
         Debug.Log(T);
        // headPanel.GetComponent<Animation>().Play("HeadAnim"); // убрал, так как лишняя анимация
         finalText.SetActive(false);
-    }
-    void generateQuestion()
-    {
-        
-
-        if (qList.Count > 0)
-        {
-            if (scoreText.gameObject.activeSelf) scoreText.GetComponent<Animation>().Play("Bubble_Close_3");
-            // randQ = Random.Range(0, qList.Count); //в случае викторины от 2х и выше
-            //randQ = 246; // 0 - отсутствует перемешка
-            //рандомизация вопроса
-           // Debug.Log("Первый из randQList" + randQList[1]);
-            randQ = Random.Range(0, qList.Count);
-            Debug.Log("После новой рандомизации: " + randQ);
-            if (randQList[0] == -1) randQList[0] = randQ;
-            // проверка был ли такой randQ сделано через for и if, можно через switch
-            for (int jj=0; jj<randQList.Length; jj++)
-            {
-                Debug.Log(randQList[jj]);
-                if (randQList[jj]==randQ)
-                {
-                    randQ = Random.Range(0, qList.Count);
-                    // добавляем в массив новый randQ
-                    for (int ii = 1; ii < randQList.Length; ii++)
-                    {
-                        if (randQList[ii] == -1)
-                        { 
-                            randQList[ii] = randQ;
-                            goto link1;
-                        }
-                    }
-                    
-
-
-                }
-                
-            }
-           
-            link1:
-            crntQ = qList[randQ] as QuestionsList;
-            if (crntQ != null)
-            {
-                questionText.text = crntQ.Question;
-                questionText.GetComponent<Animation>().Play("Bubble_Open_1");
-                List<string> answers = new List<string>(crntQ.answers);
-                // в случае одного ответа
-                // int randA = Random.Range(0, answers.Count); // рандомизатор ответа
-                int randA = 0; // фиксируем ответ на первом, 0 элемент списка ответов
-                answersText[0].text = answers[randA];
-                answers.RemoveAt(randA);
-                // в случае нескольких ответов запуск цикла for
-                /*  for (int i = 0; i < crntQ.answers.Length; i++)
-                  {
-                      int randA = Random.Range(0, answers.Count);
-                      answersText[i].text = answers[randA];
-                      answers.RemoveAt(randA);
-                  }
-                  */
-            }
-            StartCoroutine(answersBttnsInAnim());
-            //StartCoroutine(timer()); // было в викторине
-            //  timeCount = publicTimeCount; // было в викторине
-            currentQ++;
-        }
-        else StartCoroutine(final());
-    }
-    public void answerBttn(int index)
+    }*/
+  
+   /* public void answerBttn(int index)
     {
         answerClicked = true;
         timeCount = T;
         StartCoroutine(trueOrFalse(answersText[index].text == crntQ.answers[0]));
-    }
-    IEnumerator OneSecond()
+    } */
+  /*  IEnumerator OneSecond()
     {
         yield return new WaitForSeconds(1);
 
-    }
-    IEnumerator final()
+    } */
+    /*IEnumerator final()
     {
         // finalText.SetActive(true);
 
@@ -728,8 +674,8 @@ public class GameScript : MonoBehaviour {
         // scoreText.GetComponent<Animation>().Play("Bubble_Close_3");
         // finalText.GetComponent<Animation>().Play("Bubble_Close_3");
         // if (score > PlayerPrefs.GetInt("score")) PlayerPrefs.SetInt("score", score); //Обновляет рекорд, у нас как дополнение при максимальной серии угадываний игроком
-    }
-    IEnumerator timer()
+    } */
+   /* IEnumerator timer()
     {
         timeCount = T;
         
@@ -769,12 +715,12 @@ public class GameScript : MonoBehaviour {
          }
          else yield break;
          */
-         } 
+       //  } 
         //foreach (Button t in answerBttns) t.interactable = false;
-        if (timeCount<0) StartCoroutine(timeOut());
+     /*   if (timeCount<0) StartCoroutine(timeOut());
         
-    }
-    IEnumerator answersBttnsInAnim()
+    } */
+   /* IEnumerator answersBttnsInAnim()
     {
        // foreach (Button t in answerBttns) t.interactable = false;
         int i = 0;
@@ -795,12 +741,12 @@ public class GameScript : MonoBehaviour {
         }
         */
         //  foreach (Button t in answerBttns) t.interactable = true; // эта штука перебирает кнопки, а у нас одна...
-        answerBttns[0].interactable = true; //убираем и заменяем на одну команду
+       /* answerBttns[0].interactable = true; //убираем и заменяем на одну команду
         yield return new WaitForSeconds(0.5f);
         PauseOnBttn.SetActive(true);
         // yield return StartCoroutine(timer()); //Данная строчка для запуска таймера в режиме викторины связанная с перезапуском таймера в случае правильного ответа
-    }
-    IEnumerator timeOut()
+    } */
+   /* IEnumerator timeOut()
     {
         //foreach (Button t in answerBttns) t.GetComponent<Animation>().Play("Bubble_Close_2");
         
@@ -850,81 +796,12 @@ public class GameScript : MonoBehaviour {
         Debug.Log(scoreTeamTwo);
         Debug.Log(scoreTeamThree);
         Debug.Log(T);
-        BeginTeamName();
+        //BeginTeamName();
         BeginTeam.SetActive(true);
 
         // if (score > PlayerPrefs.GetInt("score")) PlayerPrefs.SetInt("score", score); //Обновление рекорда, дубль для качественной работы, пока не требуется 
-    }
-    IEnumerator trueOrFalse(bool check)
-    {
-        defaultColor = false;
-       // foreach (Button t in answerBttns) t.interactable = false; // опять foreach заменяем на обычную, в отличие от викторины на 3 ответа
-        answerBttns[0].interactable = false;
-        // по умолчанию следующее значение в скобках было равно 1
-        yield return new WaitForSeconds(1);
-        if (check)
-        {
-           // score = score + 1;
-            switch (ij)
-            {
-                case 1:
-                    scoreTeamOne = scoreTeamOne + 1;
-                    score = scoreTeamOne;
-                    break;
-                case 2:
-                    scoreTeamTwo = scoreTeamTwo + 1;
-                    score = scoreTeamTwo;
-                    break;
-                case 3:
-                    scoreTeamThree = scoreTeamThree + 1;
-                    score = scoreTeamThree;
-                    break;
-            }
-            //Интересное решение, которое можно добавить к расширенной версии игры или доп. возможностям
-            /*  score = score + (multiplierScore * currentQ) + (timeCount * multiplierScore); */
-            //
-            // foreach (Button t in answerBttns) t.GetComponent<Animation>().Play("Bubble_Close_2"); // опять foreach заменяем на for
-
-            trueColor = true;
-            yield return new WaitForSeconds(0.5f);
-            if (!answersIcons[0].activeSelf) answersIcons[0].SetActive(true);
-            else answersIcons[0].GetComponent<Animation>().Play("Bubble_Open_3");
-            questionText.GetComponent<Animation>().Play("Bubble_Close_1");
-           yield return new WaitForSeconds(0.5f);
-            time.GetComponent<Animation>().Play("Bubble_Close_3");
-            qList.RemoveAt(randQ);
-            if (!scoreText.gameObject.activeSelf) scoreText.gameObject.SetActive(true);
-            else scoreText.GetComponent<Animation>().Play("Bubble_Open_3");
-            yield return new WaitForSeconds(1);
-            answersIcons[0].GetComponent<Animation>().Play("Bubble_Close_3");
-            trueColor = false;
-            defaultColor = true;
-            generateQuestion();
-            StartCoroutine(timer());
-        }
-        else
-        {
-            foreach (Button t in answerBttns) t.GetComponent<Animation>().Play("Bubble_Close_2");
-            falseColor = true;
-            yield return new WaitForSeconds(0.5f);
-            if (!answersIcons[1].activeSelf) answersIcons[1].SetActive(true);
-            else answersIcons[1].GetComponent<Animation>().Play("Bubble_Open_3");
-            questionText.GetComponent<Animation>().Play("Bubble_Close_1");
-            yield return new WaitForSeconds(0.5f);
-            if (!scoreText.gameObject.activeSelf) scoreText.gameObject.SetActive(true);
-            else scoreText.GetComponent<Animation>().Play("Bubble_Open_3");
-            yield return new WaitForSeconds(1);
-            answersIcons[1].GetComponent<Animation>().Play("Bubble_Close_3");
-            time.GetComponent<Animation>().Play("Bubble_Close_3");
-            falseColor = false;
-            defaultColor = true;
-            headPanel.GetComponent<Animation>().Play("HeadAnimOut");
-            scoreText.GetComponent<Animation>().Play("Bubble_Close_3");
-            if (score > PlayerPrefs.GetInt("score")) PlayerPrefs.SetInt("score", score);
-            yield return new WaitForSeconds(1.5f);
-            scoreText.gameObject.SetActive(false);
-        }
-    }
+    } */
+   
 
     public void PauseOnGameBttn()
     {
@@ -951,7 +828,7 @@ public class GameScript : MonoBehaviour {
 
     }
 
-    public void PauseOnGameBttn_2()
+   /* public void PauseOnGameBttn_2()
     {
   
             PausePanelBattn.SetActive(false);
@@ -962,9 +839,9 @@ public class GameScript : MonoBehaviour {
 
     }
 
+*/
 
-
-    public void ShowRulstBttn()
+   /* public void ShowRulstBttn()
     {
 
         RulsBttn.SetActive(false);  
@@ -974,7 +851,7 @@ public class GameScript : MonoBehaviour {
         headPanel.GetComponent<Animation>().Play("HeadAnim");
 
 
-    }
+    } */
 
 
     public void ShowRulstBttn2()
@@ -1047,7 +924,7 @@ public class GameScript : MonoBehaviour {
 
 
 
-    public void ShowRulstexit()
+   /* public void ShowRulstexit()
     {
 
        
@@ -1056,9 +933,9 @@ public class GameScript : MonoBehaviour {
         headPanel.GetComponent<Animation>().Play("HeadAnimOut");
 
 
-    }
+    } */
 
-    public void RulstPan(int bttn)
+   /* public void RulstPan(int bttn)
     {
         RulsBttn.SetActive(true);
         PlayBttn.SetActive(true);
@@ -1076,7 +953,7 @@ public class GameScript : MonoBehaviour {
             headPanel.GetComponent<Animation>().Play("HeadAnimOut");
         }
     }
-
+    */
 
 
     public void ReturnePausePanel()
@@ -1101,7 +978,7 @@ public class GameScript : MonoBehaviour {
 
 
 
-    public void PusePan(int bttn)
+  /*  public void PusePan(int bttn)
     {
         if (bttn == 0)
         {
@@ -1115,10 +992,10 @@ public class GameScript : MonoBehaviour {
             if (!AudioMan.activeSelf && open_audio.activeSelf && T > 0 && T < 7) AudioMan.SetActive(true);
         }
     }
+    */
 
 
-
-
+/*
     public void ShowExitBttn()
     {
 
@@ -1130,9 +1007,9 @@ public class GameScript : MonoBehaviour {
         headPanel.GetComponent<Animation>().Play("HeadAnim");
 
 
-    }
+    } */
 
-    public void exitPan(int bttn)
+   /* public void exitPan(int bttn)
     {
         if (bttn == 0)
         {
@@ -1146,7 +1023,7 @@ public class GameScript : MonoBehaviour {
         ExitBttn.SetActive(true);
     }
     //Выбор команды
-    public void ChooseNumberOfTeam()
+  /*  public void ChooseNumberOfTeam()
     {
         NumberOfTeam.SetActive(true);
         headPanel.GetComponent<Animation>().Play("HeadAnim");
@@ -1158,7 +1035,7 @@ public class GameScript : MonoBehaviour {
     }
 
     // Начинается раздел статистики, StatList
-    public void StatTable()
+  /*  public void StatTable()
     {
         StatList.SetActive(true);
         StatNameOne.text = nameT1;
@@ -1179,7 +1056,7 @@ public class GameScript : MonoBehaviour {
 
     }
 
-    public void BttnGoStat()
+   /* public void BttnGoStat()
     {
             
         BeginTeam.SetActive(false);
@@ -1188,7 +1065,7 @@ public class GameScript : MonoBehaviour {
        
     }
 
-    public void BttnGoBeginTeam()
+   /* public void BttnGoBeginTeam()
     {
         StatList.SetActive(false);
         BeginTeam.SetActive(true);
@@ -1196,7 +1073,7 @@ public class GameScript : MonoBehaviour {
     }
 
 
-    public void SaveNameTeamOne()
+   /* public void SaveNameTeamOne()
     {
 
         nameT1 = InputNOT1.text;
@@ -1205,7 +1082,7 @@ public class GameScript : MonoBehaviour {
      
     }
 
-    public void SaveNameTeamTwo()
+   /* public void SaveNameTeamTwo()
     {
 
         nameT2 = InputNOT2.text;
@@ -1214,7 +1091,7 @@ public class GameScript : MonoBehaviour {
 
     }
 
-    public void SaveNameTeamThree()
+  /*  public void SaveNameTeamThree()
     {
 
         nameT3 = InputNOT3.text;
@@ -1223,7 +1100,7 @@ public class GameScript : MonoBehaviour {
 
     }
 
-    public void BttnNameOfTeamOne()
+  /*  public void BttnNameOfTeamOne()
     {
        
         NameOfTeam1.SetActive(false);
@@ -1231,7 +1108,7 @@ public class GameScript : MonoBehaviour {
         if (nameT1 == "") nameT1 = "Кусаки";
     }
     // ПОПРАВИТЬ и прикрутить логику от количества команд
-    public void BttnNameOfTeamTwo()
+  /*  public void BttnNameOfTeamTwo()
     {
 
         NameOfTeam2.SetActive(false);
@@ -1248,7 +1125,7 @@ public class GameScript : MonoBehaviour {
         if (nameT2 == "") nameT2 = "Чуббаки";
     }
 
-    public void BttnNameOfTeamThree()
+  /*  public void BttnNameOfTeamThree()
     {
 
         NameOfTeam3.SetActive(false);
@@ -1257,7 +1134,7 @@ public class GameScript : MonoBehaviour {
         if (nameT3 == "") nameT3 = "Мураши";
     }
 
-    public void BeginTeamName()
+    /*public void BeginTeamName()
     {
 
         switch (ij)
@@ -1273,7 +1150,7 @@ public class GameScript : MonoBehaviour {
                 break;
         }
 
-    }
+    } */
 
     /* //Скрипт по умному с очищением input
      public void BttnNameOfTeam()
@@ -1388,7 +1265,7 @@ NameOfTeam.SetActive(false);
 
 
 } */
-
+/*
     public void BttnTwoTeam()
     {
         NumberOfTeam.SetActive(false);
@@ -1404,12 +1281,13 @@ NameOfTeam.SetActive(false);
 
         
     }
+    */
     // Для тестирования заполнения формы
     private void SubmitName(string arg0)
     {
         Debug.Log(arg0);
     }
-
+/*
     public void BttnThreeTeam()
     {
         NumberOfTeam.SetActive(false);
@@ -1420,7 +1298,7 @@ NameOfTeam.SetActive(false);
         NameOfTeam1.SetActive(true);
 
     }
-
+    */
     public void NameTeam(int nt)
     {
         /*

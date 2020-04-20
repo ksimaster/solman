@@ -20314,6 +20314,12 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 843940499}
   m_Mesh: {fileID: 4300004, guid: a36c97e9edb7de24e9b3e421fb78c91c, type: 3}
+--- !u!1 &845332486 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 150860, guid: df93da55c6ab79e40b5edf0196e909b4,
+    type: 3}
+  m_PrefabInstance: {fileID: 958178459}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &847282773
 GameObject:
   m_ObjectHideFlags: 0
@@ -20744,7 +20750,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 125248, guid: 861cb3ae427ec9644bf6bff9313c76d2, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 22466438, guid: 861cb3ae427ec9644bf6bff9313c76d2, type: 3}
       propertyPath: m_AnchoredPosition.x
@@ -24425,20 +24431,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8b0b88071e8173049a7479c90de520e9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Questions: []
-  publicTimeCount: 20
-  trueCC: {r: 0, g: 0, b: 0, a: 0}
-  falseCC: {r: 0, g: 0, b: 0, a: 0}
-  defaultCC: {r: 0, g: 0, b: 0, a: 0}
-  multiplierScore: 100
-  questionText: {fileID: 0}
-  answerBttns:
-  - {fileID: 0}
-  answersText:
-  - {fileID: 0}
-  answersIcons: []
-  randQList: 
-  headPanel: {fileID: 0}
   Open_Panel: {fileID: 944982112}
   Close_Panel: {fileID: 1780557962}
   Anim_Planka: {fileID: 1161140888}
@@ -24467,6 +24459,7 @@ MonoBehaviour:
   Zvuk: {fileID: 2000048222}
   Panel_ustav: {fileID: 746814804}
   Panel_smile: {fileID: 826349665}
+  SumPauseBttn: {fileID: 845332486}
   HeadAllPanel: {fileID: 0}
   exitPanel: {fileID: 0}
   RulsPanel: {fileID: 0}
@@ -24492,40 +24485,6 @@ MonoBehaviour:
   PauseOnBttn: {fileID: 0}
   ComeBackGameBttn: {fileID: 0}
   AudioMan: {fileID: 0}
-  StatList: {fileID: 0}
-  StatNameOne: {fileID: 0}
-  ScoreTeamOne: {fileID: 0}
-  StatNameTwo: {fileID: 0}
-  ScoreTeamTwo: {fileID: 0}
-  StatNameThree: {fileID: 0}
-  ScoreTeamThree: {fileID: 0}
-  InputNOT1: {fileID: 0}
-  InputNOT2: {fileID: 0}
-  InputNOT3: {fileID: 0}
-  time: {fileID: 0}
-  recordText: {fileID: 0}
-  scoreText: {fileID: 0}
-  BeginTeamText: {fileID: 0}
-  T: 0
-  ij: 0
-  editorImg: {fileID: 0}
-  bg: {fileID: 0}
-  BttnExit: {fileID: 0}
-  numberTeam2: 0
-  numberTeam3: 0
-  teamOneRC: 0
-  teamTwoRC: 0
-  teamThreeRC: 0
-  StatOnOff: 0
-  RulsOnOff: 0
-  NumberOfTeamOnOff: 0
-  NameOfTeam1OnOff: 0
-  NameOfTeam2OnOff: 0
-  NameOfTeam3OnOff: 0
-  BeginTeamOnOff: 0
-  nameT1: 
-  nameT2: 
-  nameT3: 
 --- !u!1 &984405507
 GameObject:
   m_ObjectHideFlags: 0
