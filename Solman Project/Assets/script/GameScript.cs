@@ -54,6 +54,7 @@ public class GameScript : MonoBehaviour {
 	public GameObject Zvuk;
     //USTAV
     public GameObject Panel_ustav;
+    public GameObject Panel_smile;
 
 
 
@@ -229,7 +230,7 @@ public class GameScript : MonoBehaviour {
 	{
 	 
 
-Application.Quit();	
+        Application.Quit();	
 		
 	}
 
@@ -288,9 +289,52 @@ Application.Quit();
 
     }
 
+    public void ButtonSmileOpen()
+    {
+        Anim_Planka.SetActive(false);
+        Anim_Prised.SetActive(false);
+        Anim_Otgimaniya.SetActive(false);
+        Anim_velosiped.SetActive(false);
+        Anim_prigok.SetActive(false);
+        Open_Panel.SetActive(false);
+        Close_Panel.SetActive(false);
+        BackMainScene.SetActive(false);
+        Skaf.SetActive(false);
+        //Book.SetActive(true);
+        Ustav.SetActive(false);
+        UstavClose.SetActive(false);
+        Smile.SetActive(false);
+        SmileClose.SetActive(true);
 
-	
-	public void ButtonVolumeGameOff()
+        Panel_smile.SetActive(true);
+    }
+
+    public void ButtonSmileClose()
+    {
+        Anim_Planka.SetActive(false);
+        Anim_Prised.SetActive(false);
+        Anim_Otgimaniya.SetActive(false);
+        Anim_velosiped.SetActive(false);
+        Anim_prigok.SetActive(false);
+        Open_Panel.SetActive(true);
+        Close_Panel.SetActive(false);
+        BackMainScene.SetActive(false);
+        Skaf.SetActive(true);
+        //Book.SetActive(false);
+        Ustav.SetActive(true);
+        UstavClose.SetActive(false);
+        Smile.SetActive(true);
+        SmileClose.SetActive(false);
+        Panel_smile.SetActive(false);
+
+    }
+
+
+
+
+
+
+    public void ButtonVolumeGameOff()
 	{
 	 VolumeGameOff.SetActive(false);
 	 VolumeGameOn.SetActive(true);
