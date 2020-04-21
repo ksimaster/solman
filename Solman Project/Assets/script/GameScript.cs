@@ -263,7 +263,10 @@ public class GameScript : MonoBehaviour {
 
 	}
 
-    
+    public void OpenTT()
+    {
+        Application.OpenURL("https://magazintt.ru/");
+    }
 
     IEnumerator UstavContinue()
     {
